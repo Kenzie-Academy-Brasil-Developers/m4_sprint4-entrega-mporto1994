@@ -1,22 +1,6 @@
-// import database from "../../database"
-
-// const createCategoryService = async ({name}) => {
-//     try{
-//         const res = await database.query("INSERT INTO categories(name) VALUES($1) RETURNING *",
-//         [name]
-//         )
-//         console.log(res)
-//         return res.rows[0]
-//     }catch(error){throw new Error(error)
-    
-//     }
-// }
-// export default createCategoryService;
-
-
 import database from "../../database";
 
-const createCategorieService = async ( {name} ) => {
+const createCategoryService = async ( {name} ) => {
   try {
     console.log(name)
 
@@ -32,4 +16,4 @@ const createCategorieService = async ( {name} ) => {
   }
 };
 
-export default createCategorieService;
+export default createCategoryService;
