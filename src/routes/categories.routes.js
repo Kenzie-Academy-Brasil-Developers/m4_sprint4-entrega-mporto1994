@@ -1,9 +1,9 @@
 import { Router } from "express";
-import createCategoryController from "../controllers/categories/createCategory.controller";
-import deleteCategoriesController from "../controllers/categories/deleteCategory.controller";
-import listCategoriesController from "../controllers/categories/listCategory.controller";
+import createCategoryController    from "../controllers/categories/createCategory.controller";
+import deleteCategoriesController  from "../controllers/categories/deleteCategory.controller";
+import listCategoriesController    from "../controllers/categories/listCategory.controller";
 import listOneCategoriesController from "../controllers/categories/listOneCategory.controller";
-import updateCategoryController from "../controllers/categories/updateCategory.controller";
+import updateCategoryController    from "../controllers/categories/updateCategory.controller";
 
 const categoryRouter = Router();
 
