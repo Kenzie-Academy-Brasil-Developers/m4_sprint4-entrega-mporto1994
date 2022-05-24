@@ -1,19 +1,23 @@
-FROM node:16
+	FROM node:16
 
-RUN apt-get update
+	USER root
 
-ENV PORT=3333
+	RUN apt-get update
 
-EXPOSE 3333
+	ENV PORT=3000
 
-WORKDIR /app
+	EXPOSE 3000
 
-COPY package*.json yarn*.lock ./ 
+	WORKDIR /app
 
-RUN yarn
+    COPY yarn.lock ./
 
-COPY . .
+	COPY package.json ./
 
-USER node
+	RUN yarn
 
-CMD ["yarn", "dev"]
+	COPY . .
+
+	USER node
+
+	CMD yarn dev
